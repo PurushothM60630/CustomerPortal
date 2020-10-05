@@ -45,8 +45,6 @@ import { HttpClientModule } from '@angular/common/http';
     PaymentsandagingComponent,
     CreditmemoComponent,
     OverallsalesdataComponent,
-    
-    
   ],
   imports: [ 
     AppRoutingModule,
