@@ -32,19 +32,20 @@
           </mat-list-item>
 
         <mat-list-item>
-          <button 
-          class="menu-item"
-            mat-flat-button [matMenuTriggerFor]="afterMenu">
-            <mat-icon>dashboard</mat-icon>
-          Dashboard <mat-icon style="margin-left: 50px;">expand_more</mat-icon></button>
-          <mat-menu #afterMenu="matMenu" xPosition="after">
-            <button [routerLink]="['../navbar/inquirydata']"mat-menu-item style="padding-left: 60px;padding-right: 60px;">Inquiry data</button>
+          <button class="menu-item"mat-flat-button> <mat-icon>dashboard</mat-icon> Dashboard </button>
+            <!--<button [routerLink]="['../navbar/inquirydata']"mat-menu-item style="padding-left: 60px;padding-right: 60px;">Inquiry data</button>
             <button [routerLink]="['../navbar/saleorderdata']"mat-menu-item style="padding-left: 60px;padding-right: 60px;">Sale Order Data</button>
-            <button [routerLink]="['../navbar/listofdata']"mat-menu-item style="padding-left: 60px;padding-right: 60px;">List Of Delivery</button>
-          </mat-menu>
-          
+            <button [routerLink]="['../navbar/listofdata']"mat-menu-item style="padding-left: 60px;padding-right: 60px;">List Of Delivery</button> -->
         </mat-list-item>
-        
+        <mat-list-item>
+          <button [routerLink]="['../navbar/inquirydata']"class="menu-item" mat-flat-button > <mat-icon>assignment</mat-icon>Inquirydata </button>
+        </mat-list-item>
+        <mat-list-item>
+          <button [routerLink]="['../navbar/saleorderdata']"class="menu-item"mat-flat-button> <mat-icon>shopping_cart</mat-icon>Sale Order Data </button>
+        </mat-list-item>
+        <mat-list-item>
+          <button [routerLink]="['../navbar/listofdata']"class="menu-item"mat-flat-button> <mat-icon> local_shipping</mat-icon>List Of Delivery </button>
+        </mat-list-item>
         <mat-list-item>
             <button 
             class="menu-item"
