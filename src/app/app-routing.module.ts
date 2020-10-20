@@ -10,7 +10,7 @@ import { InvoicedataComponent } from './invoicedata/invoicedata.component';
 import { PaymentsandagingComponent } from './paymentsandaging/paymentsandaging.component';
 import { CreditmemoComponent } from './creditmemo/creditmemo.component';
 import { OverallsalesdataComponent } from './overallsalesdata/overallsalesdata.component';
-
+import { DashboardComponent } from './dashboard/dashboard.component';
 const routes: Routes = [
   {path:'home', component:LoginComponent},
   {path:'navbar',
@@ -40,9 +40,13 @@ const routes: Routes = [
     { path:'overallsalesdata', 
       component:OverallsalesdataComponent
     },
+    { path:'Dashboard', 
+      component:DashboardComponent
+    },
    ]
   },
   
+
 
   
 ];
