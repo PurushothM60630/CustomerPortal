@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule,NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -27,8 +27,8 @@ import { PaymentsandagingComponent } from './paymentsandaging/paymentsandaging.c
 import { CreditmemoComponent } from './creditmemo/creditmemo.component';
 import { OverallsalesdataComponent } from './overallsalesdata/overallsalesdata.component';
 import { HttpClientModule } from '@angular/common/http';
-
-
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { CarouselModule, WavesModule } from 'angular-bootstrap-md';
 
 
 
@@ -45,6 +45,7 @@ import { HttpClientModule } from '@angular/common/http';
     PaymentsandagingComponent,
     CreditmemoComponent,
     OverallsalesdataComponent,
+    DashboardComponent,
   ],
   imports: [ 
     AppRoutingModule,
@@ -65,7 +66,13 @@ import { HttpClientModule } from '@angular/common/http';
     MatTabsModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    CarouselModule,
+    WavesModule,
+   
+    
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]
