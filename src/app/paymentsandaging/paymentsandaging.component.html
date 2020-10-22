@@ -3,3 +3,40 @@
     <li><a href="#">Navbar</a></li>
     <li><a href="#">Payments and Aging</a></li>
   </ul>
+
+  <table class="table">
+    <thead class="black white-text">
+      <tr>
+        <th scope="col">KUNNR</th>
+        <th scope="col">BUDAT</th>
+        <th scope="col">VBELN</th>
+        <th scope="col">BUKRS</th>
+        <th scope="col">BELNR</th>
+        <th scope="col">XBLNR</th>
+        <th scope="col">BLART</th>
+        <th scope="col">SHKZG</th>
+        <th scope="col">POSN2</th>
+        <th scope="col">GSBER</th>
+        <th scope="col">ZFBDT</th>
+        <th scope="col">ZTERM</th>
+        <th scope="col">DMBTR</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor= "let payment of payment">
+        <td>{{payment.KUNNR}}</td>
+        <td>{{payment.BUDAT}}</td>
+        <td>{{payment.VBELN}}</td>
+        <td>{{payment.BUKRS}}</td>
+        <td>{{payment.BELNR}}</td>
+        <td>{{payment.XBLNR}}</td>
+        <td>{{payment.BLART}}</td>
+        <td>{{payment.SHKZG}}</td>
+        <td>{{payment.POSN2}}</td>
+        <td>{{payment.GSBER}}</td>
+        <td>{{payment.ZFBDT}}</td>
+        <td>{{payment.ZTERM}}</td>
+        <td>{{payment.DMBTR}}</td>
+      </tr>
+    </tbody>
+  </table>

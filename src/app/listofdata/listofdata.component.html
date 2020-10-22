@@ -3,3 +3,42 @@
     <li><a href="#">Navbar</a></li>
     <li><a href="#">ListOfDelivery</a></li>
   </ul>
+
+  <table class="table">
+    <thead class="black white-text">
+      <tr>
+        <th scope="col">VBELN</th>  
+        <th scope="col">ERNAM</th>
+        <th scope="col">ERZET</th>
+        <th scope="col">ERDAT</th>
+        <th scope="col">LDDAT</th>
+        <th scope="col">WADAT</th>
+        <th scope="col">LFDAT</th>
+        <th scope="col">KODAT</th>
+        <th scope="col">INCO1</th>
+        <th scope="col">INCO2</th>
+        <th scope="col">POSNR</th>
+        <th scope="col">MATNR</th>
+        <th scope="col">MATWA</th>
+        <th scope="col">MTART</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor= "let listofdel of listofdel">
+        <td>{{listofdel.VBELN}}</td>
+        <td>{{listofdel.ERNAM}}</td>
+        <td>{{listofdel.ERZET}}</td>
+        <td>{{listofdel.ERDAT}}</td>
+        <td>{{listofdel.LDDAT}}</td>
+        <td>{{listofdel.WADAT}}</td>
+        <td>{{listofdel.LFDAT}}</td>
+        <td>{{listofdel.KODAT}}</td>
+        <td>{{listofdel.INCO1}}</td>
+        <td>{{listofdel.INCO2}}</td>
+        <td>{{listofdel.POSNR}}</td>
+        <td>{{listofdel.MATNR}}</td>
+        <td>{{listofdel.MATWA}}</td>
+        <td>{{listofdel.MTART}}</td>
+      </tr>
+    </tbody>
+  </table>

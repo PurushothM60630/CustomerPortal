@@ -4,15 +4,12 @@
     <img  src="assets/kaarlogo.png"  class="toolbar-icon">
     <span class="toolbar-buttons"></span>
     <a >Home</a>
-    <a >News</a>
-    <a >About us</a>
-    <a button class="contactbutton">Contact us</a>
   </mat-toolbar>
 </div>
 <div  fxFlexFill class="main-div" fxLayoutAlign="center center">
   <mat-card fxFlex="27" class="card">
       <mat-toolbar class="login-toolbar">Customer Portal Login <mat-icon class="icon-position">fingerprint</mat-icon> </mat-toolbar>
-      <form #f ="ngForm" name="form"  fxLayoutAlign="stretch" fxLayout="column" class="login-form" autocomplete="off"> 
+      <form #f ="ngForm" name="form" (ngSubmit)="onSubmit(f)" fxLayoutAlign="stretch" fxLayout="column" class="login-form" autocomplete="off"> 
           <mat-form-field >
             <input  [(ngModel)]="username" name="username" matInput placeholder="Username" >
           </mat-form-field>

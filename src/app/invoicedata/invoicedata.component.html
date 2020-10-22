@@ -3,3 +3,36 @@
     <li><a href="#">Navbar</a></li>
     <li><a href="#">InvoiceDetails</a></li>
   </ul>
+
+  <table class="table">
+    <thead class="black white-text">
+      <tr>
+        <th scope="col">KUNNR</th>
+        <th scope="col">VBELN</th>
+        <th scope="col">AUART</th>
+        <th scope="col">BUKRS_VF</th>
+        <th scope="col">VKORG</th>
+        <th scope="col">VTWEG</th>
+        <th scope="col">FKDAT</th>
+        <th scope="col">ERZET</th>
+        <th scope="col">ERDAT</th>
+        <th scope="col">WAERK</th>
+        <th scope="col">NETWR</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor= "let invoice of invoice">
+        <td>{{invoice.KUNNR}}</td>
+        <td>{{invoice.VBELN}}</td>
+        <td>{{invoice.AUART}}</td>
+        <td>{{invoice.BUKRS_VF}}</td>
+        <td>{{invoice.VKORG}}</td>
+        <td>{{invoice.VTWEG}}</td>
+        <td>{{invoice.FKDAT}}</td>
+        <td>{{invoice.ERZET}}</td>
+        <td>{{invoice.ERDAT}}</td>
+        <td>{{invoice.WAERK}}</td>
+        <td>{{invoice.NETWR}}</td>
+      </tr>
+    </tbody>
+  </table>

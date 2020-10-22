@@ -3,3 +3,40 @@
     <li><a href="#">Navbar</a></li>
     <li><a href="#">SaleOrderData</a></li>
   </ul>
+
+  <table class="table">
+    <thead class="black white-text">
+      <tr>
+        <th scope="col">VBELN</th>
+        <th scope="col">AUDAT</th>
+        <th scope="col">ARKTX</th>
+        <th scope="col">AUART</th>
+        <th scope="col">VSBED</th>
+        <th scope="col">KUNAG</th>
+        <th scope="col">BUKRS_VF</th>
+        <th scope="col">MATNR</th>
+        <th scope="col">MATWA</th>
+        <th scope="col">MATKL</th>
+        <th scope="col">POSAR</th>
+        <th scope="col">NETWR</th>
+        <th scope="col">NETPR</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor= "let saleorder of saleorder">
+        <td>{{saleorder.VBELN}}</td>
+        <td>{{saleorder.AUDAT}}</td>
+        <td>{{saleorder.ARKTX}}</td>
+        <td>{{saleorder.AUART}}</td>
+        <td>{{saleorder.VSBED}}</td>
+        <td>{{saleorder.KUNAG}}</td>
+        <td>{{saleorder.BUKRS_VF}}</td>
+        <td>{{saleorder.MATNR}}</td>
+        <td>{{saleorder.MATWA}}</td>
+        <td>{{saleorder.MATKL}}</td>
+        <td>{{saleorder.POSAR}}</td>
+        <td>{{saleorder.NETWR}}</td>
+        <td>{{saleorder.NETPR}}</td>
+      </tr>
+    </tbody>
+  </table>

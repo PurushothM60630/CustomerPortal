@@ -3,3 +3,40 @@
     <li><a href="#">Navbar</a></li>
     <li><a href="#">InquiryData</a></li>
   </ul>
+
+  <table class="table">
+    <thead class="black white-text">
+      <tr>
+        <th scope="col">VBELN</th>
+        <th scope="col">POSNR</th>
+        <th scope="col">MATNR</th>
+      <!--  <th scope="col">POSAR</th>
+        <th scope="col">ERNAM</th> -->
+        <th scope="col">ERDAT</th>
+        <th scope="col">WAERK</th>
+      <!--  <th scope="col">VSTEL</th> -->
+        <th scope="col">ERZET</th>
+        <th scope="col">AUDAT</th>
+        <th scope="col">AUART</th>
+        <th scope="col">NETWR</th>
+        <th scope="col">PRSOK</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor= "let inquiry of inquiry">
+        <td>{{inquiry.VBELN}}</td>
+        <td>{{inquiry.POSNR}}</td>
+        <td>{{inquiry.MATNR}}</td>
+      <!--  <td>{{inquiry.POSAR}}</td>
+        <td>{{inquiry.ERNAM}}</td> -->
+        <td>{{inquiry.ERDAT}}</td>
+        <td>{{inquiry.WAERK}}</td>
+      <!--  <td>{{inquiry.VSTEL}}</td> -->
+        <td>{{inquiry.ERZET}}</td>
+        <td>{{inquiry.AUDAT}}</td>
+        <td>{{inquiry.AUART}}</td>
+        <td>{{inquiry.NETWR}}</td>
+        <td>{{inquiry.PRSOK}}</td>
+      </tr>
+    </tbody>
+  </table>
