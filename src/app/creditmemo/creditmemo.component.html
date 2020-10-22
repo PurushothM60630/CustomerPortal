@@ -3,3 +3,34 @@
     <li><a href="#">Navbar</a></li>
     <li><a href="#">Credit Memo</a></li>
   </ul>
+
+  <table class="table">
+    <thead class="black white-text">
+      <tr>
+        <th scope="col">KUNNR</th>
+        <th scope="col">VBELN</th>
+        <th scope="col">FKTYP</th>
+        <th scope="col">POSNV</th>
+        <th scope="col">ERZET</th>
+        <th scope="col">MATNR</th>
+        <th scope="col">MEINS</th>
+        <th scope="col">PLART</th>
+        <th scope="col">WAERS</th>
+        <th scope="col">FPLNR</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor= "let creditmemo of creditmemo">
+        <td>{{creditmemo.KUNNR}}</td>
+        <td>{{creditmemo.VBELN}}</td>
+        <td>{{creditmemo.FKTYP}}</td>
+        <td>{{creditmemo.POSNV}}</td>
+        <td>{{creditmemo.ERZET}}</td>
+        <td>{{creditmemo.MATNR}}</td>
+        <td>{{creditmemo.MEINS}}</td>
+        <td>{{creditmemo.PLART}}</td>
+        <td>{{creditmemo.WAERS}}</td>
+        <td>{{creditmemo.FPLNR}}</td>
+      </tr>
+    </tbody>
+  </table>

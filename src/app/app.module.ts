@@ -32,6 +32,8 @@ import { CarouselModule, WavesModule } from 'angular-bootstrap-md';
 
 
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,6 +48,7 @@ import { CarouselModule, WavesModule } from 'angular-bootstrap-md';
     CreditmemoComponent,
     OverallsalesdataComponent,
     DashboardComponent,
+    
   ],
   imports: [ 
     AppRoutingModule,
@@ -69,6 +72,8 @@ import { CarouselModule, WavesModule } from 'angular-bootstrap-md';
     HttpClientModule,
     CarouselModule,
     WavesModule,
+    
+    
    
     
 
