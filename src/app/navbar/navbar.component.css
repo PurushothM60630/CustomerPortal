@@ -24,6 +24,7 @@ body {
 }
 .mat-toolbar.mat-primary {
     background:#700102;
+    color: white;
 }
 #sidenavContainer {
     margin-top: 64px;
@@ -77,4 +78,7 @@ body {
     padding-top: 15px;
     padding-bottom: 5px;
     cursor: pointer;
+}
+.progress-bar {
+    color: grey;
 }

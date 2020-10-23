@@ -26,9 +26,11 @@ import { InvoicedataComponent } from './invoicedata/invoicedata.component';
 import { PaymentsandagingComponent } from './paymentsandaging/paymentsandaging.component';
 import { CreditmemoComponent } from './creditmemo/creditmemo.component';
 import { OverallsalesdataComponent } from './overallsalesdata/overallsalesdata.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CarouselModule, WavesModule } from 'angular-bootstrap-md';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { InterceptorService } from './interceptor.service';
 
 
 
@@ -48,6 +50,7 @@ import { CarouselModule, WavesModule } from 'angular-bootstrap-md';
     CreditmemoComponent,
     OverallsalesdataComponent,
     DashboardComponent,
+  
     
   ],
   imports: [ 
@@ -72,6 +75,7 @@ import { CarouselModule, WavesModule } from 'angular-bootstrap-md';
     HttpClientModule,
     CarouselModule,
     WavesModule,
+    MatProgressBarModule
     
     
    
@@ -79,7 +83,9 @@ import { CarouselModule, WavesModule } from 'angular-bootstrap-md';
 
 
   ],
-  providers: [],
+  providers: [
+    {provide:HTTP_INTERCEPTORS,useClass:InterceptorService,multi:true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

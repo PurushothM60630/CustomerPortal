@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, BehaviorSubject } from 'rxjs';
 import { LoginComponent } from './login/login.component';
 export interface logindata {
 
@@ -134,7 +134,8 @@ export interface overallsales {
 
 
 export class LoginserviceService {
-
+  
+  public isLoading:BehaviorSubject<boolean> = new BehaviorSubject <boolean>(false);
   private url: string = "http://localhost:8080/";
  
   constructor(private http: HttpClient) { }

@@ -5,8 +5,7 @@
     Customer Portal
     <span class="toolbar-spacer"></span>
     <mat-icon
-      class="toolbar-icon"
-      [routerLink]="['../home']"
+      class="toolbar-icon" (click) = "logout()"
     >logout</mat-icon>
   </mat-toolbar> 
   
@@ -65,9 +64,10 @@
       </mat-list>
     </mat-sidenav>
   
-    <mat-sidenav-content
-    [ngStyle]="{ 'margin-left.px': contentMargin }"
-    >
+  <mat-sidenav-content [ngStyle]="{ 'margin-left.px': contentMargin }" >
+      <div class = "progress-bar" *ngIf="_loginservice.isLoading | async " >
+        <mat-progress-bar color="grey" mode="indeterminate" value="40"></mat-progress-bar>
+      </div>
      <router-outlet>     </router-outlet> 
     </mat-sidenav-content>
   </mat-sidenav-container>
