@@ -1,0 +1,24 @@
+<h2 mat-dialog-title>Item Details</h2>
+<table class="table">
+    <thead class="black white-text">
+        <tr>
+            <th scope="col">SD Item Information</th>
+            <th scope="col">Material Number</th>
+            <th scope="col">Description Information</th>
+            <th scope="col">Amount</th>
+         <!--   <th scope="col">Net Price</th> -->
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let cosd of json">
+            <td>{{cosd.POSNR}}</td>
+            <td>{{cosd.MATNR}}</td>
+            <td>{{cosd.ARKTX}}</td>
+            <td>{{cosd.NETWR}}</td>
+         <!--   <td>{{cosd.NETPR}}</td> -->
+        </tr>
+    </tbody>
+</table>
+<mat-dialog-actions>
+    <button mat-button mat-dialog-close>Close</button>
+</mat-dialog-actions>

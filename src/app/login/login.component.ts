@@ -1,17 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { LoginserviceService } from '../loginservice.service';
-//import { Routes, RouterModule } from '@angular/router'; 
+import { LoginserviceService } from '../loginservice.service'; 
 import { Router } from '@angular/router'; 
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit { 
- 
+  public loading : boolean;
   public username: string;
   public password: string;
   
@@ -28,7 +25,8 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit(form:NgForm):void
-  {
+  { 
+    this.loading = true;
     const loginPayload = {
       username: form.value["username"],
       password: form.value["password"]
@@ -43,12 +41,13 @@ export class LoginComponent implements OnInit {
         }
         else {
           alert("Invalid Username or Password");
+          this.loading = false;
         }
       }
     );
-   // console.log(this.username);
-    //console.log(this.password);
-    //console.log(form.value["username"]);
-    //console.log(loginPayload);
+     /*console.log(this.username);
+     console.log(this.password);
+     console.log(form.value["username"]);
+     console.log(loginPayload);*/
   }  
 }

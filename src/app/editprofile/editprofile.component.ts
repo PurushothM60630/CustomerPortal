@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl,FormGroup,FormArray,FormBuilder } from '@angular/forms';
 import { LoginserviceService } from '../loginservice.service';
-
+import Swal from 'sweetalert2/dist/sweetalert2.js';
 
 @Component({
   selector: 'app-editprofile',
@@ -55,10 +55,11 @@ export class EditprofileComponent implements OnInit {
       this.userform.controls['Country'].setValue(data["Country"]),
       this.userform.controls['Pincode'].setValue(data["Pincode"]),
       this.userform.controls['Phonenumber'].setValue(data["Phonenumber"]),
-      this.userform.controls['Fax'].setValue(data["Fax"])
-    }
-      );
-      alert("Updated to sap database!");
+      this.userform.controls['Fax'].setValue(data["Fax"]) 
+    } 
+      ); 
+      Swal.fire('Profile Updated!');
+      //alert("Updated to sap database!");
    }
 
   ngOnInit(): void {

@@ -3,7 +3,7 @@
     <li><a href="#">Navbar</a></li>
     <li><a href="#">Payments and Aging</a></li>
   </ul>
-
+<div id="print-section">
   <table class="table">
     <thead class="black white-text">
       <tr>
@@ -12,11 +12,11 @@
         <th scope="col">Sales Document</th>
         <th scope="col">Company Code</th>
         <th scope="col">Document Number</th>
-        <th scope="col">Reference Information</th>
-        <th scope="col">Document Type</th>
+      <!--  <th scope="col">Reference Information</th>
+        <th scope="col">Document Type</th> -->
         <th scope="col">Debit/Credit Information</th>
-        <th scope="col">Item Information</th>
-        <th scope="col">Business Area</th>
+      <!--  <th scope="col">Item Information</th> -->
+      <!--  <th scope="col">Business Area</th> -->
         <th scope="col">Baseline Date For Due</th>
         <th scope="col">Terms Of Payment</th>
         <th scope="col">Amount In Local currency</th>
@@ -29,14 +29,17 @@
         <td>{{payment.VBELN}}</td>
         <td>{{payment.BUKRS}}</td>
         <td>{{payment.BELNR}}</td>
-        <td>{{payment.XBLNR}}</td>
-        <td>{{payment.BLART}}</td>
+      <!--  <td>{{payment.XBLNR}}</td> 
+        <td>{{payment.BLART}}</td> -->
         <td>{{payment.SHKZG}}</td>
-        <td>{{payment.POSN2}}</td>
-        <td>{{payment.GSBER}}</td>
+      <!--  <td>{{payment.POSN2}}</td>
+        <td>{{payment.GSBER}}</td> -->
         <td>{{payment.ZFBDT}}</td>
         <td>{{payment.ZTERM}}</td>
         <td>{{payment.DMBTR}}</td>
       </tr>
     </tbody>
   </table>
+</div>
+<button mat-raised-button color="primary" printSectionId="print-section" ngxPrint 
+style="float: right; margin-right: 5% ; margin-bottom:5%; background-color: #34b5b8; color: white;">Print</button>

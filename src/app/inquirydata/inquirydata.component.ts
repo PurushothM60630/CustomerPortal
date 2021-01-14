@@ -11,7 +11,6 @@ export class InquirydataComponent implements OnInit {
   inquiry: inquiry[] = [];
   constructor(private _loginservice:LoginserviceService,private router: Router) { }
   public logininfo = localStorage.getItem('custid');
-  
   ngOnInit(): void {
     const customerid = {
       username: this.logininfo
@@ -20,6 +19,7 @@ export class InquirydataComponent implements OnInit {
   .subscribe( data => {
       console.log('success', data );
       this.inquiry = data;
+      console.log(+data[0].MATNR);
       console.log(localStorage.getItem('custid'));
       //console.log(this.logininfo);
   }  

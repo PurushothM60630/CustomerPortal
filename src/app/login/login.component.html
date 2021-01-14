@@ -21,7 +21,8 @@
             <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
             </button>
           </mat-form-field>
-          <button class="login-button" mat-raised-button type="submit">Login</button>
+          <button class="login-button" mat-raised-button type="submit" [class.spinner]="loading" [disabled]="loading">Login
+          </button>
         </form>
   </mat-card>
 </div>

@@ -1,0 +1,32 @@
+<h2 mat-dialog-title>Item Details</h2>
+<table class="table">
+    <thead class="black white-text">
+        <tr>
+            <th scope="col">Sales Document Item</th>
+            <th scope="col">Material Number</th>
+            <th scope="col">Description</th>
+            <th scope="col">Order Quantity</th>
+            <!--  <th scope="col">Item Type</th>
+        <th scope="col">Material Group</th> -->
+            <!--  <th scope="col">Material Entered</th> -->
+            <th scope="col">Net Price</th>
+            <th scope="col">Net Value</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let csod of json">
+            <td>{{csod.POSNR}}</td>
+            <td>{{csod.MATNR}}</td>
+            <td>{{csod.ARKTX}}</td>
+            <td>{{csod.KWMENG}}</td>
+            <!--  <td>{{saleorder.POSAR}}</td>
+        <td>{{saleorder.MATKL}}</td> -->
+            <!--  <td>{{saleorder.MATWA}}</td> -->
+            <td>{{csod.NETPR}}</td>
+            <td>{{csod.NETWR}}</td>
+        </tr>
+    </tbody>
+</table>
+<mat-dialog-actions>
+    <button mat-button mat-dialog-close>Close</button>
+</mat-dialog-actions>

@@ -3,52 +3,53 @@
     <li><a href="#">Navbar</a></li>
     <li><a href="#">OverallSales Data</a></li>
   </ul>
-
+  <div id="print-section">
   <table class="table">
     <thead class="black white-text">
       <tr>
+        <th scope="col">Action</th>
         <th scope="col">Sales Document</th>
         <th scope="col">Created By</th>
         <th scope="col">Created On</th>
         <th scope="col">CustomerID</th>
         <th scope="col">SD Document  Category</th>
         <th scope="col">Entry Time</th>
-    <!--<th scope="col">BNDDT</th>
-        <th scope="col">ANGDT</th> -->
-        <th scope="col">SD Item Information</th>
-        <th scope="col">Material Number</th>
-        <th scope="col">Description Information</th>
         <th scope="col">Sales Organization</th>
         <th scope="col">Distribution Channel</th>
         <th scope="col">Division</th>
-     <!--   <th scope="col">VKGRP</th>
-        <th scope="col">VKBUR</th> -->
         <th scope="col">Document Currency</th>
+    <!--<th scope="col">BNDDT</th>
+        <th scope="col">ANGDT</th> -->
+    <!--    <th scope="col">SD Item Information</th>
+        <th scope="col">Material Number</th>
+        <th scope="col">Description Information</th>
         <th scope="col">Net Value</th>
-        <th scope="col">Net Price</th>
+        <th scope="col">Net Price</th> -->
       </tr>
     </thead>
     <tbody>
       <tr *ngFor= "let overallsales of overallsales">
+        <td><button mat-raised-button (click)="opendialog(overallsales.VBELN)">Item Details</button></td>
         <td>{{overallsales.VBELN}}</td>
         <td>{{overallsales.ERNAM}}</td>
         <td>{{overallsales.ERDAT}}</td>
         <td>{{overallsales.KUNNR}}</td>
         <td>{{overallsales.VBTYP}}</td>
         <td>{{overallsales.ERZET}}</td>
-    <!--    <td>{{overallsales.BNDDT}}</td>
-        <td>{{overallsales.ANGDT}}</td> -->
-        <td>{{overallsales.POSNR}}</td>
-        <td>{{overallsales.MATNR}}</td>
-        <td>{{overallsales.ARKTX}}</td>
         <td>{{overallsales.VKORG}}</td>
         <td>{{overallsales.VTWEG}}</td>
         <td>{{overallsales.SPART}}</td>
-    <!--    <td>{{overallsales.VKGRP}}</td>
-        <td>{{overallsales.VKBUR}}</td> -->
         <td>{{overallsales.WAERK}}</td>
+    <!--    <td>{{overallsales.BNDDT}}</td>
+        <td>{{overallsales.ANGDT}}</td> -->
+    <!--    <td>{{overallsales.POSNR}}</td>
+        <td>{{overallsales.MATNR}}</td>
+        <td>{{overallsales.ARKTX}}</td>
         <td>{{overallsales.NETWR}}</td>
-        <td>{{overallsales.NETPR}}</td>
+        <td>{{overallsales.NETPR}}</td> -->
       </tr>
     </tbody>
   </table>
+</div>
+<button mat-raised-button color="primary" printSectionId="print-section" ngxPrint 
+style="float: right; margin-right: 5% ; margin-bottom:5%; background-color: #34b5b8; color: white;">Print</button>

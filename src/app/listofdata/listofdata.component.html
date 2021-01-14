@@ -3,23 +3,22 @@
     <li><a href="#">Navbar</a></li>
     <li><a href="#">ListOfDelivery</a></li>
   </ul>
-
+  <div id="print-section">
   <table class="table">
     <thead class="black white-text">
       <tr>
-        <th scope="col">Material Information</th>  
+        <th scope="col">Sales Document</th>  
         <th scope="col">Created By Information</th>
         <th scope="col">Entry Time</th>
         <th scope="col">Created On</th>
         <th scope="col">Loading Date</th>
-        <th scope="col">Planned Goods Movement Date</th>
-        <th scope="col">Loading Date</th>
+        <th scope="col">Goods Issue Date</th>
+        <th scope="col">Delivery Date</th>
         <th scope="col">Pick Date</th>
         <th scope="col">InCoTerms1</th>
         <th scope="col">InCoTerms2</th>
         <th scope="col">SD Item Information</th>
         <th scope="col">Material Information</th>
-        <th scope="col">Material Entered</th>
         <th scope="col">Material Type</th>
       </tr>
     </thead>
@@ -37,8 +36,10 @@
         <td>{{listofdel.INCO2}}</td>
         <td>{{listofdel.POSNR}}</td>
         <td>{{listofdel.MATNR}}</td>
-        <td>{{listofdel.MATWA}}</td>
         <td>{{listofdel.MTART}}</td>
       </tr>
     </tbody>
   </table>
+</div>
+<button mat-raised-button color="primary" printSectionId="print-section" ngxPrint 
+style="float: right; margin-right: 5% ; margin-bottom:5%; background-color: #34b5b8; color: white;">Print</button>

@@ -7,6 +7,9 @@ ul.breadcrumb {
     display: inline;
     font-size: 13px;
   }
+  .breadcrumb {
+    display: flex;
+  }
   ul.breadcrumb li+li:before {
     padding: 8px;
     color: black;
@@ -20,3 +23,4 @@ ul.breadcrumb {
     color: #01447e;
     text-decoration: none;
   }
+  

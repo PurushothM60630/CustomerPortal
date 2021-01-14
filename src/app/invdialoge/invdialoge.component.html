@@ -1,0 +1,30 @@
+<h2 mat-dialog-title>Item Details</h2>
+<table class="table">
+    <thead class="black white-text">
+        <tr>
+            <th scope="col">Sales Document</th>
+            <th scope="col">Sales Document Item</th>
+            <th scope="col">Material Number</th>
+            <th scope="col">Material Group</th>
+            <th scope="col">Material Description</th>
+            <th scope="col">Unit Of Measure</th>
+            <th scope="col">Billed Quantity</th>
+            <th scope="col">Net Value</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let cinv of json">
+            <td>{{cinv.AUBEL}}</td>
+            <td>{{cinv.AUPOS}}</td>
+            <td>{{cinv.MATNR}}</td>
+            <td>{{cinv.MATKL}}</td>
+            <td>{{cinv.ARKTX}}</td>
+            <td>{{cinv.MEINS}}</td>
+            <td>{{cinv.FKIMG}}</td>
+            <td>{{cinv.NETWR}}</td>
+        </tr>
+    </tbody>
+</table>
+<mat-dialog-actions>
+    <button mat-button mat-dialog-close>Close</button>
+</mat-dialog-actions>

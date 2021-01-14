@@ -1,38 +1,69 @@
 <ul class="breadcrumb">
-    <li><a href="#">Home</a></li>
-    <li><a href="#">Navbar</a></li>
-    <li><a href="#">InvoiceDetails</a></li>
-  </ul>
-
+  <li><a href="#">Home</a></li>
+  <li><a href="#">Navbar</a></li>
+  <li><a href="#">InvoiceDetails</a></li>
+</ul>
+<div id="print-section">
   <table class="table">
     <thead class="black white-text">
       <tr>
-        <th scope="col">CustomerID</th>
+        <th scope="col">Action</th>
         <th scope="col">Sales Document</th>
-        <th scope="col">Document Type</th>
-        <th scope="col">Company Code to be billed</th>
-        <th scope="col">Sales Organization </th>
-        <th scope="col">Distribution Channel </th>
         <th scope="col">Billing Date</th>
-        <th scope="col">Entry Time</th>
-        <th scope="col">Created on</th>
+        <th scope="col">Billing Type</th>
+        <th scope="col">Billing Category</th>
+        <th scope="col">SD Document Category</th>
         <th scope="col">Document Currency</th>
-        <th scope="col">Net value</th>
+        <th scope="col">Sales Organisation</th>
+        <th scope="col">Name Of SO</th>
+        <th scope="col">Distribution Channel</th>
+        <th scope="col">Pricing Procedure</th>
+        <th scope="col">Shipping Conditions</th>
+        <th scope="col">Incoterms1</th>
+        <th scope="col">Company Code</th>
+        <th scope="col">Company Name</th>
+        <th scope="col">Payer</th>
+        <th scope="col">Sold-To-Party</th>
+        <!-- <th scope="col">Sales Document</th>
+        <th scope="col">Sales Document Item</th>
+        <th scope="col">Material Number</th>
+        <th scope="col">Material Group</th>
+        <th scope="col">Material Description</th>
+        <th scope="col">Unit Of Measure</th>
+        <th scope="col">Billed Quantity</th>
+        <th scope="col">Net Value</th> -->
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor= "let invoice of invoice">
-        <td>{{invoice.KUNNR}}</td>
+      <tr *ngFor="let invoice of invoice">
+        <td><button mat-raised-button (click)="opendialog(invoice.VBELN)">Item Details</button></td>
         <td>{{invoice.VBELN}}</td>
-        <td>{{invoice.AUART}}</td>
-        <td>{{invoice.BUKRS_VF}}</td>
-        <td>{{invoice.VKORG}}</td>
-        <td>{{invoice.VTWEG}}</td>
         <td>{{invoice.FKDAT}}</td>
-        <td>{{invoice.ERZET}}</td>
-        <td>{{invoice.ERDAT}}</td>
+        <td>{{invoice.FKART}}</td>
+        <td>{{invoice.FKTYP}}</td>
+        <td>{{invoice.VBTYP}}</td>
         <td>{{invoice.WAERK}}</td>
-        <td>{{invoice.NETWR}}</td>
+        <td>{{invoice.VKORG}}</td>
+        <td>{{invoice.VTEXT}}</td>
+        <td>{{invoice.VTWEG}}</td>
+        <td>{{invoice.KALSM}}</td>
+        <td>{{invoice.VSBED}}</td>
+        <td>{{invoice.INCO1}}</td>
+        <td>{{invoice.BUKRS}}</td>
+        <td>{{invoice.BUTXT}}</td>
+        <td>{{invoice.KUNRG}}</td>
+        <td>{{invoice.KUNAG}}</td>
+        <!-- <td>{{invoice.AUBEL}}</td> 
+        <td>{{invoice.AUPOS}}</td> 
+        <td>{{invoice.MATNR}}</td>
+        <td>{{invoice.MATKL}}</td>
+        <td>{{invoice.ARKTX}}</td>
+        <td>{{invoice.MEINS}}</td>
+        <td>{{invoice.FKIMG}}</td>
+        <td>{{invoice.NETWR}}</td> -->
       </tr>
     </tbody>
   </table>
+</div>
+<button mat-raised-button color="primary" printSectionId="print-section" ngxPrint
+  style="float: right; margin-right: 5% ; margin-bottom:5%; background-color: #34b5b8; color: white;">Print</button>

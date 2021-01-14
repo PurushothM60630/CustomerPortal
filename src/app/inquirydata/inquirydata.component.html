@@ -3,40 +3,29 @@
     <li><a href="#">Navbar</a></li>
     <li><a href="#">InquiryData</a></li>
   </ul>
-
+<div id="print-section">
   <table class="table">
     <thead class="black white-text">
       <tr>
-        <th scope="col">Sales Document</th>
-        <th scope="col">SD Item Information</th>
-        <th scope="col">Material Information</th>
-      <!--  <th scope="col">POSAR</th>
-        <th scope="col">ERNAM</th> -->
-        <th scope="col">Created on</th>
-        <th scope="col">Document Currency</th>
-      <!--  <th scope="col">VSTEL</th> -->
-        <th scope="col">Entry Time</th>
-        <th scope="col">Document Date</th>
-        <th scope="col">Document Type</th>
+        <th scope="col">Material Number</th>
+        <th scope="col">Material Description</th>
+        <th scope="col">Ordered Quantity</th>
+        <th scope="col">Net Price</th>
         <th scope="col">Net Value</th>
-        <th scope="col">Price Information</th>
+        <th scope="col">Delivery Date</th>
       </tr>
-    </thead>
+    </thead> 
     <tbody>
       <tr *ngFor= "let inquiry of inquiry">
-        <td>{{inquiry.VBELN}}</td>
-        <td>{{inquiry.POSNR}}</td>
-        <td>{{inquiry.MATNR}}</td>
-      <!--  <td>{{inquiry.POSAR}}</td>
-        <td>{{inquiry.ERNAM}}</td> -->
-        <td>{{inquiry.ERDAT}}</td>
-        <td>{{inquiry.WAERK}}</td>
-      <!--  <td>{{inquiry.VSTEL}}</td> -->
-        <td>{{inquiry.ERZET}}</td>
-        <td>{{inquiry.AUDAT}}</td>
-        <td>{{inquiry.AUART}}</td>
+        <td>{{+inquiry.MATNR}}</td>
+        <td>{{inquiry.ARKTX}}</td>
+        <td>{{inquiry.KWMENG}}</td>
+        <td>{{inquiry.NETPR}}</td>
         <td>{{inquiry.NETWR}}</td>
-        <td>{{inquiry.PRSOK}}</td>
+        <td>{{inquiry.VDATU}}</td>
       </tr>
     </tbody>
   </table>
+</div>
+  <button mat-raised-button color="primary" printSectionId="print-section" ngxPrint 
+  style="float: right; margin-right: 5%;background-color: #34b5b8; color: white;">Print</button>

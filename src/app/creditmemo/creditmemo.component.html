@@ -3,34 +3,67 @@
     <li><a href="#">Navbar</a></li>
     <li><a href="#">Credit Memo</a></li>
   </ul>
-
+<div id="print-section">
   <table class="table">
     <thead class="black white-text">
       <tr>
-        <th scope="col">CustomerID</th>
+        <th scope="col">Action</th>
         <th scope="col">Sales Document</th>
+        <th scope="col">Sales Document Category</th>
+        <th scope="col">Billing Type</th>
         <th scope="col">Billing Category</th>
-        <th scope="col">Item Information</th>
-        <th scope="col">Entry Time</th>
-        <th scope="col">Material Number</th>
-        <th scope="col">Base Unit Of Measure</th>
-        <th scope="col">Planning Type </th>
         <th scope="col">Currency</th>
-        <th scope="col">Invoicing Plan Number</th>
+        <th scope="col">Sales Organization</th>
+        <th scope="col">Name Of SO</th>
+        <th scope="col">Distribution Channel</th>
+        <th scope="col">Pricing Procedure</th>
+        <th scope="col">Shipping Conditions</th>
+        <th scope="col">Billing Date</th>
+        <th scope="col">Incoterms1</th>
+        <th scope="col">Incoterms2</th>
+        <th scope="col">Company Code</th>
+        <th scope="col">Company Name</th>
+        <th scope="col">Payer</th>
+        <th scope="col">Sold-To-Party</th>
+      <!--  <th scope="col">Sales Document</th> 
+        <th scope="col">Material Number</th>
+        <th scope="col">Sales Document Item</th>
+        <th scope="col">Short Text </th>
+        <th scope="col">Material Group</th>
+        <th scope="col">Unit Of Measure</th>
+        <th scope="col">Billed Quantity</th> -->
       </tr>
     </thead>
     <tbody>
       <tr *ngFor= "let creditmemo of creditmemo">
-        <td>{{creditmemo.KUNNR}}</td>
+        <td><button mat-raised-button (click)="opendialog(creditmemo.VBELN)">Item Details</button></td>
         <td>{{creditmemo.VBELN}}</td>
+        <td>{{creditmemo.VBTYP}}</td>
+        <td>{{creditmemo.FKART}}</td>
         <td>{{creditmemo.FKTYP}}</td>
-        <td>{{creditmemo.POSNV}}</td>
-        <td>{{creditmemo.ERZET}}</td>
+        <td>{{creditmemo.WAERK}}</td>
+        <td>{{creditmemo.VKORG}}</td>
+        <td>{{creditmemo.VTEXT}}</td>
+        <td>{{creditmemo.VTWEG}}</td>
+        <td>{{creditmemo.KALSM}}</td>
+        <td>{{creditmemo.VSBED}}</td>
+        <td>{{creditmemo.FKDAT}}</td>
+        <td>{{creditmemo.INCO1}}</td>
+        <td>{{creditmemo.INCO2}}</td>
+        <td>{{creditmemo.BUKRS}}</td>
+        <td>{{creditmemo.BUTXT}}</td>
+        <td>{{creditmemo.KUNRG}}</td>
+        <td>{{creditmemo.KUNAG}}</td>
+      <!--  <td>{{creditmemo.AUBEL}}</td> 
         <td>{{creditmemo.MATNR}}</td>
+        <td>{{creditmemo.AUPOS}}</td>
+        <td>{{creditmemo.ARKTX}}</td>
+        <td>{{creditmemo.MATKL}}</td>
         <td>{{creditmemo.MEINS}}</td>
-        <td>{{creditmemo.PLART}}</td>
-        <td>{{creditmemo.WAERS}}</td>
-        <td>{{creditmemo.FPLNR}}</td>
+        <td>{{creditmemo.FKIMG}}</td> -->
       </tr>
     </tbody>
   </table>
+</div>
+  <button mat-raised-button color="primary" printSectionId="print-section" ngxPrint 
+  style="float: right; margin-right: 5% ; margin-bottom:5%; background-color: #34b5b8; color: white;">Print</button>

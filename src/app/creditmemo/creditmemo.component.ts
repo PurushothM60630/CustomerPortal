@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginserviceService, creditmemo } from '../loginservice.service';
 import { Router } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
+import { CmdialogeComponent } from '../cmdialoge/cmdialoge.component';
 @Component({
   selector: 'app-creditmemo',
   templateUrl: './creditmemo.component.html',
@@ -8,7 +10,10 @@ import { Router } from '@angular/router';
 })
 export class CreditmemoComponent implements OnInit {
   creditmemo : creditmemo[] = [];
-  constructor(private _loginservice:LoginserviceService,private router: Router) { }
+  res;
+  vbelnvalue;
+  ccm;
+  constructor(private _loginservice:LoginserviceService,private router: Router,public dialog:MatDialog) { }
   public logininfo = localStorage.getItem('custid');
   ngOnInit(): void {
     const customerid = {
@@ -22,5 +27,14 @@ export class CreditmemoComponent implements OnInit {
   );
 
   }
-
+  opendialog(VBELN){
+    
+    this.vbelnvalue = VBELN;
+    //alert(this.ebelnvalue);
+    this.res = this.creditmemo.filter(it => new RegExp(VBELN).test(it.VBELN));
+    //alert(JSON.stringify(this.res));
+    sessionStorage.setItem("ccm",JSON.stringify(this.res));
+    this.dialog.open(CmdialogeComponent);
+  }
+  
 }

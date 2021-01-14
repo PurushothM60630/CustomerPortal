@@ -31,11 +31,12 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { CarouselModule, WavesModule } from 'angular-bootstrap-md';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { InterceptorService } from './interceptor.service';
-
-
-
-
-
+import { NgxPrintModule } from 'ngx-print';
+import { MatDialogModule } from '@angular/material/dialog';
+import { SoddialogeComponent } from './soddialoge/soddialoge.component';
+import { InvdialogeComponent } from './invdialoge/invdialoge.component';
+import { CmdialogeComponent } from './cmdialoge/cmdialoge.component';
+import { OsddialogeComponent } from './osddialoge/osddialoge.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,9 +51,12 @@ import { InterceptorService } from './interceptor.service';
     CreditmemoComponent,
     OverallsalesdataComponent,
     DashboardComponent,
-  
-    
+    SoddialogeComponent,
+    InvdialogeComponent,
+    CmdialogeComponent,
+    OsddialogeComponent
   ],
+  entryComponents :[SoddialogeComponent,InvdialogeComponent,CmdialogeComponent,OsddialogeComponent],
   imports: [ 
     AppRoutingModule,
     BrowserModule,
@@ -75,9 +79,9 @@ import { InterceptorService } from './interceptor.service';
     HttpClientModule,
     CarouselModule,
     WavesModule,
-    MatProgressBarModule
-    
-    
+    MatProgressBarModule,
+    NgxPrintModule,
+    MatDialogModule
    
     
 
